@@ -13,6 +13,7 @@ export const useGetMyUser = () => {
 
     const response = await fetch(`${API_BASE_URI}/api/v0/user/`, {
       method: "GET",
+      mode: "cors",
       headers: {
         Authorization: `Bearer ${accessToken}`,
         "Content-Type": "application/json",
@@ -53,8 +54,9 @@ export const useCreateMyUser = () => {
   const createMyUserRequest = async (user: CreateUserRequest) => {
     const accessToken = await getAccessTokenSilently();
 
-    const response = await fetch(`${API_BASE_URI}/api/v0/user/register`, {
+    const response = await fetch(`${API_BASE_URI}/api/v0/user/`, {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${accessToken}`,
@@ -99,6 +101,7 @@ export const useUpdateMyUser = () => {
 
     const response = await fetch(`${API_BASE_URI}/api/v0/user/`, {
       method: "PUT",
+      mode: "cors",
       headers: {
         Authorization: `Bearer ${accessToken}`,
         "Content-Type": "application/json",
