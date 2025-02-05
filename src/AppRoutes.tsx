@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/layout";
 import Home from "./pages/Home";
-import AuthCallbackPage from "./pages/AuthCallBackPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
+import AuthCallbackPage from "./pages/AuthCallbackPage";
 
 const AppRoutes = () => {
   return (
